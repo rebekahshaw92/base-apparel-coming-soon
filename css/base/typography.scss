@@ -1,0 +1,59 @@
+$font: 'Josefin Sans', sans-serif;
+$desaturatedRed: hsl(0, 36%, 70%);
+$darkGrayishRed: hsl(0, 6%, 24%);
+
+
+body {
+    font-family: $font;
+}
+
+.headerText {
+    font-weight: 300;
+    text-align: center;
+    color: $desaturatedRed;
+    letter-spacing: 20px;
+    margin-top: 90px;
+    margin-left: 120px;
+    margin-right: 90px;
+    margin-bottom: 40px;
+    font-size: 60px;
+    @include media-breakpoint-up(lg) {
+        text-align: left;
+        margin-left: 60px;
+        font-size: 60px;
+    }
+    span {
+        font-weight: 400;
+        color: $darkGrayishRed;
+    }
+}
+
+.subText {
+    font-size: 22px;
+    color: $desaturatedRed;
+    text-align: center;
+    margin-top: 45px;
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-bottom: 20px;
+    @include media-breakpoint-up(lg) {
+        text-align: left;
+        margin-left: 60px;
+        width: 50%;
+        font-size: 16px;
+    }
+   @include media-breakpoint-up(xl){
+    width: 68%;
+   }
+}
+
+#email {
+    &::placeholder {
+    color: $desaturatedRed;
+    padding: 20px;
+    }
+    input {
+        font-size: 20px;
+    }
+
+}

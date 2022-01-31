@@ -1,0 +1,137 @@
+$desaturatedRed: hsl(0, 36%, 70%);
+$softRed: hsl(0, 93%, 68%);
+$darkGrayishRed: hsl(0, 6%, 24%);
+
+body {
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    @include media-breakpoint-up(lg) {
+        background-image: url('../images/bg-pattern-desktop.svg');
+        background-repeat: no-repeat;
+    }
+}
+.img-top {
+    margin-left: 60px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.img-main {
+    padding: 0;
+    width: 100%;
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+
+.img-main-desktop {
+   display: none;
+    @include media-breakpoint-up(lg) {
+        display: block;
+        width: 520px;
+        height: 100%;
+        float: right;
+    }
+    @include media-breakpoint-up(xl) {  
+        width: 100%;
+    }
+}
+
+
+#email {
+    margin: 20px 50px 0;
+    height: 50px;   
+}
+
+#input {
+    margin: 20px 20px 70px;
+    position: relative;
+   
+    @include media-breakpoint-up(lg) {
+        margin: 5px 5px 70px;
+    }
+}
+
+input {  
+    width: 85%;
+    border-radius: 28px;
+    border: 1px solid $desaturatedRed;
+    background-color: transparent;
+    padding-left: 10px;
+    @include media-breakpoint-up(lg) {
+       width: 58%;
+    }
+    
+}
+
+.input-control.error { 
+    color: $softRed;
+    input {
+        border-color: $softRed;
+        border-width: 2px;
+   } 
+}
+
+.myButton {
+    position: absolute;
+    height: 50px;
+    width: 90px;
+    top: 20px;
+    right: 32px;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: $desaturatedRed;
+    box-shadow: 2px 5px 10px hsla(0, 36%, 70%, 0.5);
+    cursor: pointer;
+    border-radius: 28px;
+    display: inline-block;
+    @include media-breakpoint-up(lg) {
+        right: 215px;
+    }
+    @include media-breakpoint-up(xl) {
+        right: 170px;
+    }
+    @include media-breakpoint-up(xxl) {
+        right: 215px;
+    }
+    &:hover {
+        filter: brightness(1.15);
+        opacity: 1;
+        transform: scale(1.1);
+        box-shadow: 2px 5px 10px 6px hsla(0, 36%, 70%, 0.5);
+    }
+}
+
+.icon {
+    display: none;
+}
+
+.error {
+    position: relative;
+    color: $softRed;
+   // padding: 20px;
+    transition: opacity .3s ease;
+    opacity: 1;
+    p {
+   // bottom: -1.6rem;
+   top: 0.5rem;
+     left: 5rem;
+    }
+   
+.icon {
+    position: absolute;
+    display: block;
+    top: 2rem;
+    right: 9rem;
+    opacity: 1;
+    transition: opacity .3s ease;
+    @include media-breakpoint-up(lg) {
+        right: 20rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        right: 17rem;
+    }
+    @include media-breakpoint-up(xxl) {
+        right: 20rem;
+    }
+}
+}

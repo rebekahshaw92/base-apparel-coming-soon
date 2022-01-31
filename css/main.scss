@@ -1,0 +1,13 @@
+/* main.scss */
+
+/* Media Style */
+@import "../scss/bootstrap-grid.scss";
+
+/* base */
+
+// @import "base/reset.scss";
+@import "base/typography.scss";
+
+/* layout */
+@import "layout/body.scss";
+@import "layout/footer.scss";
